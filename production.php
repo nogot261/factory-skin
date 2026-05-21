@@ -1,0 +1,4 @@
+<?php require_once 'functions.php'; layout_header('Производство'); ?>
+<h1>Производственный процесс</h1><ol class="steps"><li><strong>Проектирование.</strong> Подготовка эскиза и лекал.</li><li><strong>Раскрой.</strong> Подбор кожи и вырезание деталей.</li><li><strong>Подготовка.</strong> Обработка краев, установка усилителей и фурнитуры.</li><li><strong>Сборка.</strong> Склейка, прошивка, установка подкладки.</li><li><strong>Контроль.</strong> Проверка внешнего вида, швов и работоспособности фурнитуры.</li></ol>
+<div class="notice"><strong>Важно:</strong> проект не использует CMS. Страницы и логика реализованы на PHP, HTML, CSS и JavaScript.</div>
+<?php layout_footer(); ?>

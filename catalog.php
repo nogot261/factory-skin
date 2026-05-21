@@ -1,0 +1,3 @@
+<?php require_once 'functions.php'; require_once 'data/articles.php'; layout_header('Каталог'); ?>
+<h1>Каталог изделий</h1><p>В каталоге представлены основные товарные группы. Для учебного проекта цены и позиции демонстрационные.</p><div class="cards product-list"><?php foreach($products as $p): ?><article class="card"><h2><?=htmlspecialchars($p['name'])?></h2><p><?=htmlspecialchars($p['desc'])?></p><p><strong><?=htmlspecialchars($p['price'])?></strong></p><a class="btn small" href="contacts.php">Оставить заявку</a></article><?php endforeach; ?></div>
+<?php layout_footer(); ?>

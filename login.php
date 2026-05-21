@@ -1,0 +1,7 @@
+<?php require_once 'functions.php'; if(session_status()===PHP_SESSION_NONE) session_start();
+$users=['admin'=>['password'=>'admin2025','role'=>'Администратор'],'manager'=>['password'=>'manager2025','role'=>'Менеджер'],'client'=>['password'=>'client2025','role'=>'Клиент']];
+if(isset($_GET['logout'])){ session_destroy(); header('Location: index.php'); exit; }
+$error=''; if($_SERVER['REQUEST_METHOD']==='POST'){ $login=$_POST['login']??''; $pass=$_POST['password']??''; if(isset($users[$login]) && $users[$login]['password']===$pass){ $_SESSION['user']=['login'=>$login,'role'=>$users[$login]['role']]; header('Location: admin.php'); exit; } else { $error='Неверный логин или пароль'; }} layout_header('Вход'); ?>
+<h1>Вход на сайт</h1><?php if($error): ?><p class="error"><?=htmlspecialchars($error)?></p><?php endif; ?><form class="login-form" method="post"><label>Логин<input name="login" required></label><label>Пароль<input name="password" type="password" required></label><button class="btn">Войти</button></form>
+<div class="notice"><p><strong>Тестовые учетные записи:</strong></p><ul><li>admin / admin2025 — администратор</li><li>manager / manager2025 — менеджер</li><li>client / client2025 — клиент</li></ul></div>
+<?php layout_footer(); ?>

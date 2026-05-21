@@ -1,0 +1,5 @@
+<?php require_once 'functions.php'; require_once 'data/articles.php'; layout_header('Главная'); ?>
+<section class="hero"><div><h1>Производство изделий из кожи</h1><p>Учебный сайт предприятия, которое выпускает сумки, кошельки, ремни, обложки и корпоративные кожаные аксессуары.</p><a class="btn" href="catalog.php">Перейти в каталог</a></div></section>
+<section class="grid-3"><div class="feature"><h2>Собственное производство</h2><p>Раскрой, сборка, прошивка и контроль качества выполняются внутри мастерской.</p></div><div class="feature"><h2>Индивидуальные заказы</h2><p>Можно выбрать материал, цвет, размер, фурнитуру и нанесение логотипа.</p></div><div class="feature"><h2>Уход и ремонт</h2><p>На сайте размещены рекомендации по эксплуатации и восстановлению изделий.</p></div></section>
+<h2>Последние материалы</h2><div class="cards"><?php foreach(array_slice($articles,0,3) as $a) article_card($a); ?></div>
+<?php layout_footer(); ?>

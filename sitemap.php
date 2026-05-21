@@ -1,0 +1,3 @@
+<?php require_once 'functions.php'; layout_header('Карта сайта'); ?>
+<h1>Карта сайта</h1><ul class="sitemap"><li><a href="index.php">Главная</a></li><li><a href="about.php">О компании</a></li><li><a href="catalog.php">Каталог</a></li><li><a href="production.php">Производство</a></li><li><a href="care.php">Уход за кожей</a></li><li><a href="news.php">Новости и статьи</a></li><li><a href="contacts.php">Контакты</a></li><li><a href="login.php">Вход пользователей</a></li><li><a href="search.php">Поиск</a></li><li><a href="404.php">Страница 404</a></li></ul>
+<?php layout_footer(); ?>
