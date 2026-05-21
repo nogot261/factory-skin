@@ -1,4 +1,5 @@
 *.log
+*.docx
 .DS_Store
 Thumbs.db
 storage/messages.json
