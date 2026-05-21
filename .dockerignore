@@ -1,0 +1,5 @@
+.git
+.gitignore
+*.log
+storage/messages.json
+storage/*.tmp
